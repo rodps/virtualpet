@@ -1,0 +1,15 @@
+@model Tamagotchi.Models.Pet
+@{
+    ViewData["Title"] = "Novo Pet";
+}
+
+<div class="center">
+
+<img style="width: 200px" src="http://2.bp.blogspot.com/-pEi1Tz0Xj9o/Ui3--vUDuXI/AAAAAAAAAp8/9bMzxDo3Rq8/s1600/tumblr_m1i3b73kEI1r6gk4zo1_500.gif">
+
+<form action="/Home/Create" method="POST">
+    <input type="text" class="form-control" placeholder="Nome" name="Name">
+    <button type="submit" class="btn btn-primary btn-block">Criar</button>
+</form>
+
+</div>

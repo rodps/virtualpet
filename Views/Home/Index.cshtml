@@ -1,0 +1,85 @@
+﻿@model Tamagotchi.Models.Pet
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="overlay"></div>
+
+<!-- <meta http-equiv="refresh" content="2"> -->
+<div class="center" style="width: 30%;
+background: url(http://blog.pressan.is/wp-content/uploads/sites/90/2010/11/green-field-wallpapers_8739_1024x7681.jpg);
+background-position:bottom">
+
+<div class="row center" >
+    <div style="width: 90%; margin-top: 10px;" class="btn-group btn-group-justified center" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button id="cure" type="button" class="btn btn-lg">
+                <i class="fas fa-syringe"></i>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="eat" type="button" class="btn btn-lg">
+                <i class="fas fa-utensils"></i>
+            </button>
+        </div>
+        <div style="z-index: 2" class="btn-group" role="group">
+            <button id="sleep" type="button" class="btn btn-lg">
+                <i class="fas fa-lightbulb"></i>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="shower" type="button" class="btn btn-lg">
+                <i class="fas fa-shower"></i>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="play" type="button" class="btn btn-lg">
+                <i class="fas fa-gamepad"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row center">
+        
+        <p>I am <span id="state">@Model.State</span></p>
+        <div style="position:relative">
+            <img id="petimg" style="width: 200px; height: 200px" src="http://2.bp.blogspot.com/-pEi1Tz0Xj9o/Ui3--vUDuXI/AAAAAAAAAp8/9bMzxDo3Rq8/s1600/tumblr_m1i3b73kEI1r6gk4zo1_500.gif">
+            <img id="showering" style="position:absolute; left: 30%; width: 200px; visibility: hidden" src="https://pa1.narvii.com/6646/3ed476cf57c8c0a39e21c5006c3810f4b6cddb8c_hq.gif">
+        </div>
+        <h4 style="color:white">@Model.Name</h4>
+        <div class="center" style="width: 90%">
+        <div class="progress">
+        <div id="happyBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="@Model.Happy" aria-valuemin="0" aria-valuemax="100" style="width: @Model.Happy%">
+           Happy
+        </div>
+        </div>
+
+        <div class="progress">
+        <div id="healthBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="@Model.Health" aria-valuemin="0" aria-valuemax="100" style="width: @Model.Health%">
+            Health
+        </div>
+        </div>
+        <div class="progress">
+        <div id="hungerBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="@Model.Hunger" aria-valuemin="0" aria-valuemax="100" style="width: @Model.Hunger%">
+            Hunger
+        </div>
+        </div>   
+
+    </div> 
+
+</div>
+
+</div>
+
+
+
+<a class="btn btn-danger" style="float: right">Excluir Pet</a>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+
+

@@ -1,0 +1,20 @@
+@model IEnumerable<Tamagotchi.Models.Pet>
+@{
+    ViewData["Title"] = "Meus Pets";
+}
+
+<div class="center">
+
+    <a class="btn btn-danger btn-block" href="/Home/Create">Novo Pet</a>
+
+    <h2>Meus Pets</h2>
+
+    <div class="list-group text-center">
+        @foreach (var pet in @Model)
+        {
+            <a href="/Home/Index/@pet.Id" class="list-group-item">@pet.Name</a> 
+        }
+    </div>
+
+</div>
+
